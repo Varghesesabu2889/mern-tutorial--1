@@ -17,14 +17,14 @@ const app = express()
 //     })
 // })
 //using json and with status code
-app.get('/api/goals',(req,res)=>{
-    res.status(201).json({
-        message:`It's a Goal`
-    })
-})
 
+// app.get('/api/goals',(req,res)=>{
+//     res.status(201).json({
+//         message:`It's a Goal`
+//     })
+// })
 
-
+ app.use('/api/goals', require(`./routes/goalRoutes`))
 
 
 
